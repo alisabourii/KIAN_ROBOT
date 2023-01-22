@@ -88,13 +88,6 @@ void loop() {
 
 }
 void forward(){
-  /*unsigned int sensors[5];
-  int position = qtr.read(sensors);
-  int error = position - 2000;
-
-  int motorSpeed = KP * error + KD * (error - lastError);
-  lastError = error;*/
-  
   analogWrite(Enable_A, 150);
   analogWrite(Enable_B, 150);
   
