@@ -65,11 +65,11 @@ void setup() {
 }
 
 void loop() {
- ileri();
- geri();
+ forward();
+ backward();
 
 }
-void ileri(){
+void forward(){
   analogWrite(Enable_A, 150);
   analogWrite(Enable_B, 150);
   
@@ -85,7 +85,7 @@ void ileri(){
   delay(1000);
   }
 
-void geri(){
+void backward(){
   digitalWrite(back_led,1);
   tone(buzzer, 250);
   analogWrite(Enable_A, 150);
