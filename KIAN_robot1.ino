@@ -16,12 +16,12 @@ void setup() {
 }
 
 void loop() {
-  hareket_digital();
+  move_digital();
 
 }
 
 
-void hareket_digital()
+void move_digital()
 {
   digitalWrite(Enable_A, HIGH);
   digitalWrite(Enable_B, HIGH);
