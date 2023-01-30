@@ -74,21 +74,18 @@ int lastError = 0;
 int last_proportional = 0;
 int integral = 0;
 
-#define KP 0.4
+#define KP 0.1
 #define KD 0.6
 
 
 
 void loop() {
-    //forward();
-    //backward();
-    right_ward();
-    left_ward();
+   line_follower();
   
 }
 
 void line_follower(){
-  int position = qtr.readLineBlack(sensorValues);
+  int position = qtr.readLineWhite(sensorValues);
   int error = position - 3500;
   
     int motorSpeed = KP * error + KD * (error - lastError);
